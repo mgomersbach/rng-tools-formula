@@ -1,6 +1,6 @@
-rng-tools
+{% from "rng-tools/map.jinja" import rng-tools with context %}
 
-rng-tools
+rng-tools-pkg:
   pkg.installed:
-rng-tools
+    - name: {{ rng-tools.pkg }}
 
