@@ -1,3 +1,3 @@
 include:
-  - rng-tools.config
+  - rngtools.config
 

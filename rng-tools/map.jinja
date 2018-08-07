@@ -7,14 +7,14 @@
         },
   }
   , grain="os_family"
-  , merge=salt['pillar.get']('rng-tools:lookup'))
+  , merge=salt['pillar.get']('rngtools:lookup'))
 %}
 
-{% do default_settings.rng-tools.update(os_family_map) %}
+{% do default_settings.rngtools.update(os_family_map) %}
 
-{% set rng-tools = salt['pillar.get'](
-        'rng-tools',
-        default=default_settings.rng-tools,
+{% set rngtools = salt['pillar.get'](
+        'rngtools',
+        default=default_settings.rngtools,
         merge=True
     )
 %}
