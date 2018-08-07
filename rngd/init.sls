@@ -1,6 +1,8 @@
 {%- if pillar.rngd is defined %}
 include:
+  - .install
+  - .config
 {%- if pillar.rngd.server is defined %}
-- rngd.server
+  - .server
 {%- endif %}
 {%- endif %}

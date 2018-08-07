@@ -3,13 +3,15 @@
 
 Debian:
   pkgs:
-  - rng-tools
+    - rng-tools
 RedHat:
   pkgs:
-  - rng-tools
+    - rng-tools
 Gentoo:
   pkgs:
-  - sys-apps/rng-tools
+    - sys-apps/rng-tools
+  configfile:
+    - /etc/conf.d/rngd
 
 {%- endload %}
 
