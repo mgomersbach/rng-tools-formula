@@ -1,0 +1,10 @@
+applications:
+- rngd
+classes:
+- service.rngd.support
+parameters:
+  rngd:
+    server:
+      enabled: true
+      bind:
+        address: 0.0.0.0

@@ -1,0 +1,3 @@
+rngd:
+  server:
+    enabled: true

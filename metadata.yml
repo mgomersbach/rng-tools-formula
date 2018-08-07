@@ -1,0 +1,3 @@
+name: "rngd"
+version: "2018.1"
+source: "https://github.com/salt-formulas/salt-formula-rngd"

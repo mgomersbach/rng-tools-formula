@@ -1,0 +1,5 @@
+salt-formula-rngd (2018.1) xenial; urgency=medium
+
+  * Initial release
+
+ -- Mark Gomersbach mark@gomersbach.nl  Tue, 07 Aug 2018 09:42:31 BST

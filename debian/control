@@ -1,0 +1,15 @@
+Source: salt-formula-rngd
+Maintainer: Mark Gomersbach <mark@gomersbach.nl>
+Section: admin
+Priority: optional
+Build-Depends: debhelper (>= 9), python, python-yaml
+Standards-Version: 3.9.6
+Homepage: https://github.com/mgomersbach
+Vcs-Browser: https://github.com/salt-formulas/salt-formula-rngd
+Vcs-Git: https://github.com/salt-formulas/salt-formula-rngd.git
+
+Package: salt-formula-rngd
+Architecture: all
+Depends: ${misc:Depends}
+Description: rngd salt formula
+ Install and configure rngd.
