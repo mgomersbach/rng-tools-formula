@@ -1,0 +1,21 @@
+{%- import_yaml 'rng-tools/defaults.yaml' as default_settings %}
+
+{% set os_family_map = salt['grains.filter_by']({
+        'Gentoo': {},
+        'Arch': {
+            "pkg" : 'rng-tools',
+        },
+  }
+  , grain="os_family"
+  , merge=salt['pillar.get']('rng-tools:lookup'))
+%}
+
+{% do default_settings.rng-tools.update(os_family_map) %}
+
+{% set rng-tools = salt['pillar.get'](
+        'rng-tools',
+        default=default_settings.rng-tools,
+        merge=True
+    )
+%}
+

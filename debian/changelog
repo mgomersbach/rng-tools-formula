@@ -1,4 +1,4 @@
-salt-formula-rngd (2018.1) xenial; urgency=medium
+rng-tools
 
   * Initial release
 

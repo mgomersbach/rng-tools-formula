@@ -1,9 +1,9 @@
 applications:
-- rngd
+rng-tools
 classes:
-- service.rngd.support
+rng-tools
 parameters:
-  rngd:
+rng-tools
     server:
       enabled: true
       bind:

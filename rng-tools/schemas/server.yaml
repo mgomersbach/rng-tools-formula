@@ -1,7 +1,7 @@
 %YAML 1.1
 ---
 "$schema": "http://json-schema.org/draft-06/schema#"
-title: rngd daemon role
+rng-tools
 description: |
   Rngd daemon, server role
 type: object
@@ -13,5 +13,5 @@ required:
 properties:
   enabled:
     description: |
-      Enables rngd daemon service
+rng-tools
     type: boolean

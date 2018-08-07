@@ -1,7 +1,7 @@
-{%- from "rngd/map.jinja" import server with context %}
+rng-tools
 # Fill in documentation details
 doc:
-  name: rngd
+rng-tools
   description: Daemon to use hardware random number generators
   role:
     server:

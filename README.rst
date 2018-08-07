@@ -3,17 +3,17 @@
 Rngd Formula
 ==================================
 
-Service rngd description
+rng-tools
 
 
 Sample Metadata
 ===============
 
-Single rngd service
+rng-tools
 
 .. code-block:: yaml
 
-    rngd:
+rng-tools
       server:
         enabled: true
 
@@ -38,7 +38,7 @@ In the unfortunate event that bugs are discovered, they should be reported to
 the appropriate issue tracker. Use GitHub issue tracker for specific salt
 formula:
 
-    https://github.com/salt-formulas/salt-formula-rngd/issues
+rng-tools
 
 For feature requests, bug reports or blueprints affecting entire ecosystem,
 use Launchpad salt-formulas project:

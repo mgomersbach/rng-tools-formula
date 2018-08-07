@@ -1,3 +1,3 @@
-rngd:
+rng-tools
   server:
     enabled: true

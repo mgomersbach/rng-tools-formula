@@ -35,7 +35,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'salt-formula-rngd'
+rng-tools
 copyright = u'2016, Mark Gomersbach'
 
 # If true, '()' will be appended to :func: etc. cross-reference text.

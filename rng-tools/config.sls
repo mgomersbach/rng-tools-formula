@@ -1,10 +1,10 @@
-{% from "rngd/map.jinja" import rngd with context %}
+rng-tools
 
 {% if grains['os_family'] == 'Gentoo' %}
 main_config:
   file.managed:
-    - name: {{ rngd.configfile }}
-    - source: salt://rngd/files/rngd.conf.jinja
+rng-tools
+rng-tools
     - template: jinja
     - mode: 644
     - user: root

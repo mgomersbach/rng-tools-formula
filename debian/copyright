@@ -1,7 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: salt-formula-rngd
+rng-tools
 Upstream-Contact: salt-formulas@freelists.org
-Source: https://github.com/salt-formulas/salt-formula-rngd
+rng-tools
 
 Files: *
 Copyright: 2018 Mark Gomersbach

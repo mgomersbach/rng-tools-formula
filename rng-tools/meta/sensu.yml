@@ -1,0 +1,8 @@
+# Sample check
+check:
+rng-tools
+rng-tools
+    interval: 60
+    occurrences: 1
+    subscribers:
+rng-tools

@@ -1,7 +1,7 @@
 ---
 driver:
   name: docker
-  hostname: rngd.ci.local
+rng-tools
   #socket: tcp://127.0.0.1:2376
   use_sudo: false
 
@@ -13,17 +13,17 @@ provisioner:
   salt_bootstrap_url: https://bootstrap.saltstack.com
   salt_version: latest
   require_chef: false
-  formula: rngd
+rng-tools
   log_level: info
   state_top:
     base:
       "*":
-        - rngd
+rng-tools
   pillars:
     top.sls:
       base:
         "*":
-          - rngd
+rng-tools
   grains:
     noservices: True
 
@@ -45,6 +45,6 @@ suites:
   - name: server
     provisioner:
       pillars-from-files:
-        rngd.sls: tests/pillar/server.sls
+rng-tools
 
 # vim: ft=yaml sw=2 ts=2 sts=2 tw=125
