@@ -1,7 +1,9 @@
 rngtools:
   config:
-    #device: /dev/urandom
-    step: 64
-    #notpm: 0
-    #no_drng: 1
-    watermark: 2048
+    service: rngd
+    config:
+      #device: /dev/urandom
+      step: 64
+      #notpm: 0
+      #no_drng: 1
+      watermark: 2048

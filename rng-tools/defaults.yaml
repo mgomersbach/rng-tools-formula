@@ -1,4 +1,4 @@
 rngtools:
   pkg: 'sys-apps/rng-tools'
   configfile: '/etc/conf.d/rngd'
-
+  svc: rngd
