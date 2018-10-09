@@ -1,4 +1,7 @@
-rngtools:
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+
+rng-tools:
   pkg: 'sys-apps/rng-tools'
   configfile: '/etc/conf.d/rngd'
   svc: rngd

@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# vim: ft=jinja
+
 {% import_yaml 'rng-tools/defaults.yaml' as default_settings %}
 
 {% set os_family_map = salt['grains.filter_by']({

@@ -1,4 +1,4 @@
-rngtools:
+rng-tools:
   config:
     service: rngd
     config:

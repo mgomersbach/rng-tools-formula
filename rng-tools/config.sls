@@ -1,8 +1,11 @@
-{% from "rng-tools/map.jinja" import rngtools with context %}
+# -*- coding: utf-8 -*-
+# vim: ft=sls
+
+{% from "rng-tools/map.jinja" import rng-tools with context %}
 
 rng-tools-config:
   file.managed:
-    - name: {{ rngtools.configfile }}
+    - name: {{ rng-tools.configfile }}
     - source: salt://rng-tools/files/rngd.jinja
     - template: jinja
     - mode: 644
@@ -11,4 +14,4 @@ rng-tools-config:
     - watch_in:
       - service: rngd
     - require:
-      - pkg: {{ rngtools.pkg }}
+      - pkg: {{ rng-tools.pkg }}

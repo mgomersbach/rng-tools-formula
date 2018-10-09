@@ -1,29 +1,30 @@
-
 ==================================
-Rngd Formula
+rng-tools-formula
 ==================================
 
-rng-tools
+Formulas to set up and configure rng-tools [rng-tools](https://git.kernel.org/cgit/utils/kernel/rng-tools/rng-tools.git/)
+
+Daemon that increases [in-kernel entropy](https://en.wikipedia.org/wiki//dev/random) by leveraging [hardware support](https://en.wikipedia.org/wiki/Hardware_random_number_generator).
+
+For example some [AMD/Intel](https://en.wikipedia.org/wiki/RdRand), [Via Nano](https://jve.linuxwall.info/blog/index.php?post/2013/08/19/Hardware-RNG-from-Via-CPU-(on-debibox)) and [Raspberry Pi](http://scruss.com/blog/2013/06/07/well-that-was-unexpected-the-raspberry-pis-hardware-random-number-generator/) are capable.
+
+.. note::
+
+    See the full `Salt Formulas installation and usage instructions
+    <http://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html>`_.
+
+Available states
+================
+
+.. contents::
+    :local:
 
 
-Sample Metadata
-===============
+``rng-tools``
+------------
 
-rng-tools
+Installs the package, and starts the associated service.
 
-.. code-block:: yaml
-
-rng-tools
-      server:
-        enabled: true
-
-
-References
-==========
-
-* A link to the documentation
-* A link to the home page
-* A link to the source code
 
 
 Documentation and Bugs
