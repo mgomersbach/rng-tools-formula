@@ -5,5 +5,5 @@
 
 rng-tools-pkg:
   pkg.installed:
-    name: {{ rngtools.pkg }}
+    - name: {{ rngtools.pkg }}
 
