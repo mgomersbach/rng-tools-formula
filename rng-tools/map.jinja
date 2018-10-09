@@ -10,7 +10,11 @@
         'RedHat': {},
         'Suse': {},
         'Debian': {},
-        'Gentoo': {},
+        'Gentoo': {
+            pkg: 'rng-tools',
+            configfile: '/etc/conf.d/rngd',
+            svc: rngd',
+        },
   },
   grain="os_family",
   merge=rngtools_lookup)
