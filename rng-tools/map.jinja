@@ -16,7 +16,7 @@
   merge=rngtools_lookup)
 %}
 
-{% do defaults.rngtoola.update(os_family_map) %}
+{% do defaults.rngtools.update(os_family_map) %}
 
 {% set rngtools = salt['pillar.get'](
         'rng-tools',
