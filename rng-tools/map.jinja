@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # vim: ft=jinja
 
-{% import_yaml 'rng-tools/defaults.yaml' as defaults %}
-{% import_yaml 'rng-tools/osmap.yaml' as osmap %}
-{% import_yaml 'rng-tools/osnamemap.yaml' as osnamemap %}
+{%- import_yaml 'rng-tools/defaults.yaml' as defaults with context -%}
+{%- import_yaml 'rng-tools/osmap.yaml' as osmap with context -%}
+{%- import_yaml 'rng-tools/osnamemap.yaml' as osnamemap with context -%}
 
 set rngtools = salt['grains.filter_by'](
     defaults,
@@ -16,6 +16,6 @@ set rngtools = salt['grains.filter_by'](
         merge=salt['pillar.get']('rngtools', {}),
       ),
     ),
-    base='rngtools',
+    base='rng-tools',
 )
 %}
