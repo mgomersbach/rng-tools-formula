@@ -1,6 +1,6 @@
 # Do not modify, this file is managed from Salt
 
-{% for option, value in salt['pillar.get']('rngtools:config', {}).items() -%}
+{% for option, value in salt['pillar.get']('rng-tools:config', {}).items() -%}
 {{ option|upper }}={{ value }}
 {% endfor %}
 

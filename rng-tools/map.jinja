@@ -1,21 +1,26 @@
 # -*- coding: utf-8 -*-
 # vim: ft=jinja
 
-{%- import_yaml 'rng-tools/defaults.yaml' as defaults with context -%}
-{%- import_yaml 'rng-tools/osmap.yaml' as osmap with context -%}
-{%- import_yaml 'rng-tools/osnamemap.yaml' as osnamemap with context -%}
+{% import_yaml 'rng-tools/defaults.yaml' as defaults %}
 
-set rngtools = salt['grains.filter_by'](
-    defaults,
-    merge=salt['grains.filter_by'](
-      osmap,
-      grain='os_family',
-      merge=salt['grains.filter_by'](
-        osnamemap,
-        grain='os',
-        merge=salt['pillar.get']('rngtools:lookup', {}),
-      ),
-    ),
-    base='rng-tools',
-)
+{% set rngtools_lookup = salt['pillar.get']('rng-tools:lookup', {}).copy() %}
+
+{% set os_family_map = salt['grains.filter_by']({
+        'Arch': {},
+        'RedHat': {},
+        'Suse': {},
+        'Debian': {},
+        'Gentoo': {},
+  },
+  grain="os_family",
+  merge=rngtools_lookup)
+%}
+
+{% do defaults.rngtoola.update(os_family_map) %}
+
+{% set rngtools = salt['pillar.get'](
+        'rng-tools',
+        default=defaults.rngtools,
+        merge=True
+    )
 %}
