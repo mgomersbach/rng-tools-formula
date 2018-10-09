@@ -1,31 +1,21 @@
 # -*- coding: utf-8 -*-
 # vim: ft=jinja
 
-{% import_yaml 'rng-tools/defaults.yaml' as default_settings %}
+{% import_yaml 'rng-tools/defaults.yaml' as defaults %}
+{% import_yaml 'rng-tools/osmap.yaml' as osmap %}
+{% import_yaml 'rng-tools/osnamemap.yaml' as osnamemap %}
 
-{% set os_family_map = salt['grains.filter_by']({
-        'Gentoo': {
-            "pkg" : 'sys-apps/rng-tools',
-        },
-        'Arch': {
-            "pkg" : 'rng-tools',
-        },
-        'Ubuntu': {
-            "pkg" : 'rng-tools',
-            "configfile" : '/etc/default/rng-tools',
-            "svc" : "rng-tools",
-        },
-  }
-  , grain="os_family"
-  , merge=salt['pillar.get']('rngtools:lookup'))
+set rngtools = salt['grains.filter_by'](
+    defaults,
+    merge=salt['grains.filter_by'](
+      osmap,
+      grain='os_family',
+      merge=salt['grains.filter_by'](
+        osnamemap,
+        grain='os',
+        merge=salt['pillar.get']('rngtools', {}),
+      ),
+    ),
+    base='rngtools',
+)
 %}
-
-{% do default_settings.rngtools.update(os_family_map) %}
-
-{% set rngtools = salt['pillar.get'](
-        'rngtools',
-        default=default_settings.rngtools,
-        merge=True
-    )
-%}
-
