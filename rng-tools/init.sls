@@ -2,6 +2,6 @@
 # vim: ft=sls
 
 include:
-  - .install
-  - .config
-  - .service
+  - rng-tools.install
+  - rng-tools.config
+  - rng-tools.service
