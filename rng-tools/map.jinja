@@ -16,6 +16,6 @@ set rngtools = salt['grains.filter_by'](
         merge=salt['pillar.get']('rng-tools', {}),
       ),
     ),
-    base='rngtools',
+    base='rng-tools',
 )
 %}

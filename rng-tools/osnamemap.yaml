@@ -5,3 +5,8 @@ Fedora:
   pkg: 'rng-tools'
   configfile: '/etc/conf.d/rngd'
   svc: rngd
+
+Ubuntu:
+  pkg: 'rng-tools'
+  configfile: '/etc/default/rng-tools'
+  svc: rng-tools
