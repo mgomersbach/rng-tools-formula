@@ -6,3 +6,11 @@ Debian:
   pkg: 'rng-tools'
   configfile: '/etc/conf.d/rngd'
   svc: rngd
+
+Gentoo:
+  pkg: 'sys-apps/rng-tools'
+  configfile: '/etc/conf.d/rngd'
+  svc: rngd
+  config:
+    step: 64
+    watermark: 2048

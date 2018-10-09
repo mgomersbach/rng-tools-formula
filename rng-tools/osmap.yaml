@@ -2,7 +2,7 @@
 # vim: ft=jinja
 # vim: sts=2 ts=2 sw=2 et ai
 
-Debian:
+Ubuntu:
   pkg: 'rng-tools'
-  configfile: '/etc/conf.d/rngd'
-  svc: rngd
+  configfile: '/etc/default/rng-tools'
+  svc: rng-tools

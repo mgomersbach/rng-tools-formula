@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # vim: ft=sls
 
-{% from "rng-tools/map.jinja" import rngtools with context %}
+{% from tpldir ~ '/map.jinja' import rngtools with context %}
 
 rng-tools-config:
   file.managed:
