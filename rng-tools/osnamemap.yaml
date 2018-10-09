@@ -1,0 +1,7 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+
+Fedora:
+  pkg: 'rng-tools'
+  configfile: '/etc/conf.d/rngd'
+  svc: rngd
