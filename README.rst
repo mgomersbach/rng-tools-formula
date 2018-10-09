@@ -20,11 +20,21 @@ Available states
     :local:
 
 
+``rng-tools.install``
+------------
+Installs the package.
+
+``rng-tools.config``
+------------
+Configures the settings
+
+``rng-tools.servce``
+------------
+Starts the associated service.
+
 ``rng-tools``
 ------------
-
-Installs the package, and starts the associated service.
-
+Installs the package, configures the settings, and starts the associated service.
 
 
 Documentation and Bugs

@@ -1,8 +1,0 @@
-rng-tools
-# Fill in documentation details
-doc:
-rng-tools
-  description: Daemon to use hardware random number generators
-  role:
-    server:
-      name: server
