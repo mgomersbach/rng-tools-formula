@@ -2,6 +2,7 @@
 # vim: ft=yaml
 
 rngtools:
-  pkg: 'rng-tools'
-  configfile: '/etc/conf.d/rngd'
-  svc: rngd
+  lookup:
+    pkg: 'rng-tools'
+    configfile: '/etc/conf.d/rngd'
+    svc: rngd

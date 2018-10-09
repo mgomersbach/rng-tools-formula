@@ -13,7 +13,7 @@ set rngtools = salt['grains.filter_by'](
       merge=salt['grains.filter_by'](
         osnamemap,
         grain='os',
-        merge=salt['pillar.get']('rngtools', {}),
+        merge=salt['pillar.get']('rngtools:lookup', {}),
       ),
     ),
     base='rng-tools',
